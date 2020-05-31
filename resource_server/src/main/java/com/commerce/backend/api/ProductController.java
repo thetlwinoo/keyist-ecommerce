@@ -84,6 +84,7 @@ public class ProductController extends ApiController {
         if (productDisplay == null) {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
+
         return new ResponseEntity<List>(productDisplayService.getRelatedProducts(productDisplay.getProductCategory(), id), HttpStatus.OK);
     }
 
